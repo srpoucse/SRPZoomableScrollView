@@ -3,7 +3,6 @@
 
 @interface SRPZoomableScrollView : UIScrollView <UIScrollViewDelegate>
 {
-    CGFloat scaleLevel;
 }
 
 @property (nonatomic, strong) UIImageView *containerView;

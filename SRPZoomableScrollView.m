@@ -27,7 +27,6 @@
         [self addGestureRecognizer:tapGesture];
         
         
-        scaleLevel = CGFLOAT_MIN;
     }
     return self;
 }
@@ -46,7 +45,7 @@
     // single tap does nothing for now
 }
 
-#define SCALE_FACTOR 2
+#define SCALE_FACTOR 2 //this can be modified based on zoom scale s
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer
 {
@@ -58,7 +57,6 @@
     }
     CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
     [self zoomToRect:zoomRect animated:YES];
-    scaleLevel = newScale;
 
     
     
